@@ -308,50 +308,10 @@ overflow:hidden;
 
 position:relative;
 
-}
-
-.carousel-btn{
-
-position:absolute;
-
-top:50%;
-
-transform:translateY(-50%);
-
-background:rgba(0,0,0,0.4);
-
-border:none;
-
-color:#f8fbca;
-
-font-size:32px;
-
-width:45px;
-height:45px;
-
-border-radius:50%;
-
-cursor:pointer;
-
-z-index:3;
-
-transition:all .3s ease;
+margin-top:80px;
 
 }
 
-.carousel-btn:hover{
-
-background:rgba(0,0,0,0.7);
-
-}
-
-.prev{
-left:20px;
-}
-
-.next{
-right:20px;
-}
 
 .carousel-track{
 
