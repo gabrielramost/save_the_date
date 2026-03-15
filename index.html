@@ -94,8 +94,6 @@ Añadir al calendario
 
 <div class="photo-carousel">
 
-<button class="carousel-btn prev">‹</button>
-
 <div class="carousel-track">
 
 <img src="assets/img/photo1.jpeg" alt="" loading="lazy">
@@ -109,8 +107,6 @@ Añadir al calendario
 <img src="assets/img/photo4.jpeg" alt="" loading="lazy">
 
 </div>
-
-<button class="carousel-btn next">›</button>
 
 </div>
 
@@ -126,29 +122,6 @@ document
 .scrollIntoView({ behavior: "smooth" });
 
 }
-
-</script>
-
-<script>
-
-const track = document.querySelector(".carousel-track");
-
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector(".prev");
-
-nextBtn.addEventListener("click", () => {
-track.scrollBy({
-left:300,
-behavior:"smooth"
-});
-});
-
-prevBtn.addEventListener("click", () => {
-track.scrollBy({
-left:-300,
-behavior:"smooth"
-});
-});
 
 const weddingDate = new Date("May 30, 2026 00:00:00").getTime();
 
