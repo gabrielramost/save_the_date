@@ -1,1 +1,219 @@
+/* ----------------------------- */
+/* GLOBAL STYLES */
+/* ----------------------------- */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Playfair Display', serif;
+color:#333;
+scroll-behavior:smooth;
+
+}
+
+section{
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+}
+
+/* ----------------------------- */
+/* HERO SECTION */
+/* ----------------------------- */
+
+.hero{
+
+position:relative;
+
+background-image:url("../assets/img/hero.jpg");
+background-size:cover;
+background-position:center;
+
+color:white;
+
+}
+
+.hero-overlay{
+
+background:rgba(0,0,0,0.35);
+
+padding:70px 60px;
+
+border-radius:10px;
+
+backdrop-filter: blur(2px);
+
+}
+
+.names{
+
+font-family:'Great Vibes', cursive;
+
+font-size:72px;
+
+margin-bottom:10px;
+
+}
+
+.tagline{
+
+font-size:18px;
+
+letter-spacing:2px;
+
+opacity:0.9;
+
+}
+
+.enter-btn{
+
+margin-top:30px;
+
+padding:12px 34px;
+
+font-size:14px;
+
+border:none;
+
+border-radius:30px;
+
+background:white;
+
+color:#333;
+
+cursor:pointer;
+
+transition:all .3s ease;
+
+}
+
+.enter-btn:hover{
+
+background:#eee;
+
+transform:translateY(-2px);
+
+}
+
+/* scroll indicator */
+
+.scroll-indicator{
+
+position:absolute;
+
+bottom:30px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:28px;
+
+opacity:0.8;
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,20%,50%,80%,100%{
+transform:translate(-50%,0);
+}
+
+40%{
+transform:translate(-50%,10px);
+}
+
+60%{
+transform:translate(-50%,5px);
+}
+
+}
+
+
+/* ----------------------------- */
+/* SAVE THE DATE */
+/* ----------------------------- */
+
+.save-date{
+
+background:#f6f4ef;
+
+}
+
+.save-container{
+
+max-width:600px;
+
+padding:40px;
+
+}
+
+.title{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+font-weight:500;
+
+}
+
+.date{
+
+font-size:26px;
+
+margin-bottom:10px;
+
+}
+
+.location{
+
+font-size:18px;
+
+opacity:0.7;
+
+}
+
+
+/* ----------------------------- */
+/* MOBILE */
+/* ----------------------------- */
+
+@media (max-width:768px){
+
+.names{
+
+font-size:48px;
+
+}
+
+.hero-overlay{
+
+padding:40px;
+
+}
+
+.title{
+
+font-size:32px;
+
+}
+
+.date{
+
+font-size:22px;
+
+}
+
+}
