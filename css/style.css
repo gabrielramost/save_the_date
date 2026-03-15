@@ -1,5 +1,5 @@
 /* ----------------------------- */
-/* GLOBAL STYLES */
+/* GLOBAL */
 /* ----------------------------- */
 
 *{
@@ -9,36 +9,39 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Playfair Display', serif;
+
+font-family:'Cormorant Garamond', serif;
 color:#333;
 scroll-behavior:smooth;
+background:#fff;
+
 }
 
-/* secciones full screen */
-
 section{
+
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 position:relative;
+
 }
 
 
 /* ----------------------------- */
-/* HERO SECTION */
+/* HERO */
 /* ----------------------------- */
 
 .hero{
 
 height:100vh;
 
-background-image:url("../assets/img/hero.jpeg"); /* verifica nombre exacto */
+background-image:url("../assets/img/hero.jpeg");
 
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
+background-attachment:fixed;
 
 display:flex;
 justify-content:center;
@@ -48,25 +51,40 @@ color:white;
 
 }
 
-/* overlay oscuro para que el texto sea legible */
+
+/* cinematic overlay */
 
 .hero::before{
 
 content:"";
-
 position:absolute;
+inset:0;
 
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,0.35);
+background:linear-gradient(
+rgba(0,0,0,0.6),
+rgba(0,0,0,0.2),
+rgba(0,0,0,0.6)
+);
 
 }
 
-/* contenido hero */
+
+/* film grain */
+
+.hero::after{
+
+content:"";
+position:absolute;
+inset:0;
+
+background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+opacity:0.25;
+mix-blend-mode:overlay;
+
+}
+
+
+/* hero content */
 
 .hero-overlay{
 
@@ -75,67 +93,99 @@ z-index:2;
 
 padding:70px 60px;
 
-border-radius:10px;
-
-backdrop-filter:blur(2px);
-
 }
 
-/* nombres */
+
+/* names */
 
 .names{
 
 font-family:'Great Vibes', cursive;
-
-font-size:72px;
+font-size:78px;
 
 margin-bottom:10px;
 
+opacity:0;
+animation:fadeUp 1.5s ease forwards;
+animation-delay:0.6s;
+
 }
+
 
 /* tagline */
 
 .tagline{
 
-font-size:18px;
+font-size:20px;
 
-letter-spacing:2px;
+letter-spacing:3px;
 
 opacity:0.9;
 
+opacity:0;
+animation:fadeUp 1.5s ease forwards;
+animation-delay:1s;
+
 }
 
-/* botón */
+
+/* button */
 
 .enter-btn{
 
-margin-top:30px;
+margin-top:35px;
 
-padding:12px 34px;
+padding:12px 36px;
 
 font-size:14px;
 
 border:none;
-
 border-radius:30px;
 
 background:white;
-
 color:#333;
 
 cursor:pointer;
 
 transition:all .3s ease;
 
+opacity:0;
+animation:fadeUp 1.5s ease forwards;
+animation-delay:1.4s;
+
 }
+
+
+/* button hover */
 
 .enter-btn:hover{
 
-background:#eee;
+transform:translateY(-4px) scale(1.05);
 
-transform:translateY(-2px);
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+
+background:#f3f3f3;
 
 }
+
+
+
+/* fade animation */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
 
 
 /* scroll indicator */
@@ -144,21 +194,36 @@ transform:translateY(-2px);
 
 position:absolute;
 
-bottom:30px;
+bottom:40px;
 
 left:50%;
 
 transform:translateX(-50%);
 
-font-size:28px;
+font-size:14px;
+
+letter-spacing:2px;
 
 opacity:0.8;
+
+display:flex;
+flex-direction:column;
+align-items:center;
 
 animation:bounce 2s infinite;
 
 z-index:2;
 
 }
+
+.scroll-indicator span{
+
+font-size:22px;
+
+margin-top:5px;
+
+}
+
 
 @keyframes bounce{
 
@@ -175,6 +240,7 @@ transform:translate(-50%,5px);
 }
 
 }
+
 
 
 /* ----------------------------- */
@@ -195,23 +261,30 @@ padding:40px;
 
 }
 
+
 .title{
 
-font-size:40px;
+font-size:42px;
 
-margin-bottom:20px;
+font-weight:400;
 
-font-weight:500;
+margin-bottom:25px;
+
+letter-spacing:2px;
 
 }
+
 
 .date{
 
-font-size:26px;
+font-size:38px;
 
 margin-bottom:10px;
 
+letter-spacing:2px;
+
 }
+
 
 .location{
 
@@ -222,6 +295,28 @@ opacity:0.7;
 }
 
 
+
+/* ----------------------------- */
+/* REVEAL SCROLL */
+/* ----------------------------- */
+
+.reveal{
+
+opacity:0;
+transform:translateY(40px);
+transition:all 1.2s ease;
+
+}
+
+.reveal.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+
+
 /* ----------------------------- */
 /* MOBILE */
 /* ----------------------------- */
@@ -229,7 +324,7 @@ opacity:0.7;
 @media (max-width:768px){
 
 .names{
-font-size:48px;
+font-size:50px;
 }
 
 .hero-overlay{
@@ -241,7 +336,7 @@ font-size:32px;
 }
 
 .date{
-font-size:22px;
+font-size:26px;
 }
 
 }
