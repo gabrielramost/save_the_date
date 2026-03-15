@@ -10,14 +10,13 @@
 
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-
-<!-- HERO -->
+<!-- HERO / WELCOME -->
 
 <section class="hero">
 
@@ -28,27 +27,25 @@ Gabriel & Akemi
 </h1>
 
 <p class="tagline">
-¡Nos casamos!
+We're getting married
 </p>
 
 <button class="enter-btn" onclick="scrollToSaveDate()">
-Save the Date
+Enter
 </button>
 
 </div>
 
 <div class="scroll-indicator">
-Scroll
-<span>↓</span>
+↓
 </div>
 
 </section>
 
 
-
 <!-- SAVE THE DATE -->
 
-<section id="save-date" class="save-date reveal">
+<section id="save-date" class="save-date">
 
 <div class="save-container">
 
@@ -57,7 +54,7 @@ Save the Date
 </h2>
 
 <p class="date">
-30 May 2026
+October 10, 2026
 </p>
 
 <p class="location">
@@ -69,36 +66,17 @@ Lima, Perú
 </section>
 
 
-
 <script>
 
-function scrollToSaveDate(){
+function scrollToSaveDate() {
 
 document
 .getElementById("save-date")
-.scrollIntoView({behavior:"smooth"});
+.scrollIntoView({ behavior: "smooth" });
 
 }
-
-
-/* reveal animation */
-
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-
-});
-
-});
-
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
 </script>
-
 
 </body>
 </html>
