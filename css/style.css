@@ -254,11 +254,11 @@ margin-bottom:60px;
 /* ----------------------------- */
 
 .photo-carousel{
-
 width:100%;
-overflow:hidden;
+overflow-x:auto;
+overflow-y:hidden;
 position:relative;
-
+scroll-behavior:smooth;
 }
 
 .carousel-btn{
