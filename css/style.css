@@ -262,6 +262,39 @@ margin-bottom:40px;
 
 }
 
+.calendar-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+background:#f8fbca;
+
+color:#111;
+
+text-decoration:none;
+
+font-family:'Playfair Display', serif;
+
+font-size:15px;
+
+letter-spacing:1px;
+
+transition:all .3s ease;
+
+}
+
+.calendar-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+}
 
 /* ----------------------------- */
 /* PHOTO CAROUSEL */
