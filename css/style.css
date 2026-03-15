@@ -91,7 +91,13 @@ mix-blend-mode:overlay;
 position:relative;
 z-index:2;
 
+background:rgba(0,0,0,0.35);
+
 padding:70px 60px;
+
+border-radius:10px;
+
+backdrop-filter:blur(6px);
 
 }
 
