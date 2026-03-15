@@ -257,9 +257,21 @@ margin-bottom:60px;
 
 width:100%;
 overflow:hidden;
+position:relative;
 
 }
 
+.carousel-track{
+
+display:flex;
+
+gap:30px;
+
+animation:scrollCarousel 35s linear infinite;
+
+will-change: transform;
+
+}
 .carousel-track img:hover{
 
 transform:scale(1.05);
