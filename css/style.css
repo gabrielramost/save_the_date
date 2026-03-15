@@ -121,21 +121,34 @@ animation-delay:0.8s;
 .enter-btn{
 
 margin-top:30px;
-padding:12px 34px;
-font-size:14px;
+padding:14px 36px;
+
+font-family:'Playfair Display', serif;
+font-size:16px;
+
+letter-spacing:1px;
 
 border:none;
-border-radius:30px;
+border-radius:40px;
 
-background:white;
+background:#f8fbca;
 color:#333;
 
 cursor:pointer;
+
 transition:all .3s ease;
 
 opacity:0;
 animation:fadeUp 1.4s ease forwards;
 animation-delay:1.2s;
+
+}
+
+.enter-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
 
 }
 
