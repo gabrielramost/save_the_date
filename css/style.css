@@ -9,22 +9,22 @@ box-sizing:border-box;
 }
 
 body{
-
 font-family:'Playfair Display', serif;
 color:#333;
 scroll-behavior:smooth;
-
 }
 
-section{
+/* secciones full screen */
 
+section{
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-
+position:relative;
 }
+
 
 /* ----------------------------- */
 /* HERO SECTION */
@@ -32,27 +32,56 @@ text-align:center;
 
 .hero{
 
-position:relative;
+height:100vh;
 
-background-image:url("../assets/img/hero.jpg");
+background-image:url("../assets/img/hero.jpeg"); /* verifica nombre exacto */
+
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
 
 color:white;
 
 }
 
-.hero-overlay{
+/* overlay oscuro para que el texto sea legible */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
 
 background:rgba(0,0,0,0.35);
+
+}
+
+/* contenido hero */
+
+.hero-overlay{
+
+position:relative;
+z-index:2;
 
 padding:70px 60px;
 
 border-radius:10px;
 
-backdrop-filter: blur(2px);
+backdrop-filter:blur(2px);
 
 }
+
+/* nombres */
 
 .names{
 
@@ -64,6 +93,8 @@ margin-bottom:10px;
 
 }
 
+/* tagline */
+
 .tagline{
 
 font-size:18px;
@@ -73,6 +104,8 @@ letter-spacing:2px;
 opacity:0.9;
 
 }
+
+/* botón */
 
 .enter-btn{
 
@@ -104,6 +137,7 @@ transform:translateY(-2px);
 
 }
 
+
 /* scroll indicator */
 
 .scroll-indicator{
@@ -121,6 +155,8 @@ font-size:28px;
 opacity:0.8;
 
 animation:bounce 2s infinite;
+
+z-index:2;
 
 }
 
@@ -193,27 +229,19 @@ opacity:0.7;
 @media (max-width:768px){
 
 .names{
-
 font-size:48px;
-
 }
 
 .hero-overlay{
-
 padding:40px;
-
 }
 
 .title{
-
 font-size:32px;
-
 }
 
 .date{
-
 font-size:22px;
-
 }
 
 }
