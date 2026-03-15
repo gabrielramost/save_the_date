@@ -85,8 +85,6 @@ Lima, Perú
 
 </div>
 
-</div>
-
 </section>
 
 
@@ -104,15 +102,24 @@ document
 
 <script>
 
-const track = document.querySelector('.carousel-track');
+const track = document.querySelector(".carousel-track");
 
-document.querySelector('.next').onclick = () => {
-track.scrollBy({left:300, behavior:'smooth'});
-}
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 
-document.querySelector('.prev').onclick = () => {
-track.scrollBy({left:-300, behavior:'smooth'});
-}
+nextBtn.addEventListener("click", () => {
+track.scrollBy({
+left:300,
+behavior:"smooth"
+});
+});
+
+prevBtn.addEventListener("click", () => {
+track.scrollBy({
+left:-300,
+behavior:"smooth"
+});
+});
 
 </script>
 
