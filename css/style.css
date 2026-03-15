@@ -86,10 +86,12 @@ backdrop-filter:blur(2px);
 .names{
 
 font-family:'Great Vibes', cursive;
-
 font-size:72px;
-
 margin-bottom:10px;
+
+opacity:0;
+animation:fadeUp 1.4s ease forwards;
+animation-delay:0.4s;
 
 }
 
@@ -98,10 +100,11 @@ margin-bottom:10px;
 .tagline{
 
 font-size:18px;
-
 letter-spacing:2px;
 
-opacity:0.9;
+opacity:0;
+animation:fadeUp 1.4s ease forwards;
+animation-delay:0.8s;
 
 }
 
@@ -110,33 +113,23 @@ opacity:0.9;
 .enter-btn{
 
 margin-top:30px;
-
 padding:12px 34px;
-
 font-size:14px;
 
 border:none;
-
 border-radius:30px;
 
 background:white;
-
 color:#333;
 
 cursor:pointer;
-
 transition:all .3s ease;
 
-}
-
-.enter-btn:hover{
-
-background:#eee;
-
-transform:translateY(-2px);
+opacity:0;
+animation:fadeUp 1.4s ease forwards;
+animation-delay:1.2s;
 
 }
-
 
 /* scroll indicator */
 
@@ -242,6 +235,20 @@ font-size:32px;
 
 .date{
 font-size:22px;
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(18px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
 }
 
 }
