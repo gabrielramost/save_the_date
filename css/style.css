@@ -12,6 +12,9 @@ body{
 font-family:'Playfair Display', serif;
 color:#333;
 scroll-behavior:smooth;
+
+overflow-x:hidden;
+
 }
 
 /* secciones full screen */
@@ -319,8 +322,6 @@ display:flex;
 
 gap:30px;
 
-width:max-content;
-
 animation:scrollCarousel 40s linear infinite;
 
 }
@@ -335,7 +336,9 @@ transition:transform .4s ease;
 .carousel-track img{
 
 height:320px;
-min-width:280px;
+width:280px;
+
+flex-shrink:0;
 
 border-radius:8px;
 
@@ -344,7 +347,6 @@ object-fit:cover;
 filter:saturate(110%) contrast(105%);
 
 }
-
 
 /* movimiento lento */
 
