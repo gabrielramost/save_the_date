@@ -99,15 +99,21 @@ animation-delay:0.4s;
 
 .tagline{
 
-font-size:18px;
-letter-spacing:2px;
+font-family:'Cormorant Garamond', serif;
+
+font-size:28px;
+
+letter-spacing:1px;
+
+margin-top:12px;
+
+color:white;
 
 opacity:0;
 animation:fadeUp 1.4s ease forwards;
 animation-delay:0.8s;
 
 }
-
 /* botón */
 
 .enter-btn{
@@ -225,6 +231,10 @@ opacity:0.7;
 font-size:48px;
 }
 
+.tagline{
+font-size:22px;
+}
+
 .hero-overlay{
 padding:40px;
 }
@@ -236,8 +246,6 @@ font-size:32px;
 .date{
 font-size:22px;
 }
-
-/* ajuste imagen móvil */
 
 .hero{
 background-position:45% center;
