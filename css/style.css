@@ -448,3 +448,45 @@ transform:translateY(0);
 }
 
 }
+
+/* ----------------------------- */
+/* COUNTDOWN */
+/* ----------------------------- */
+
+.countdown{
+
+display:flex;
+
+gap:40px;
+
+justify-content:center;
+
+margin-top:40px;
+
+color:#f8fbca;
+
+font-family:'Playfair Display', serif;
+
+}
+
+.count-item span{
+
+font-size:36px;
+
+letter-spacing:2px;
+
+display:block;
+
+}
+
+.count-item p{
+
+font-size:12px;
+
+letter-spacing:2px;
+
+opacity:.7;
+
+margin-top:5px;
+
+}
