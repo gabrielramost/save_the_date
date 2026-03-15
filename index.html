@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gabriel & Akemi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Playfair Display', serif;
+}
+
+section{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+/* WELCOME */
+
+.welcome{
+background:url("https://images.unsplash.com/photo-1501908734255-16579c18c25f") center/cover no-repeat;
+color:white;
+}
+
+.overlay{
+background:rgba(0,0,0,0.35);
+padding:50px;
+border-radius:10px;
+}
+
+h1{
+font-family:'Great Vibes', cursive;
+font-size:70px;
+margin:0;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+font-size:16px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* SAVE THE DATE */
+
+.save-date{
+background:#f8f6f2;
+color:#333;
+}
+
+.save-date h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="welcome">
+
+<div class="overlay">
+<h1>Gabriel & Akemi</h1>
+<p>We're getting married</p>
+
+<button onclick="scrollToSection()">Enter</button>
+
+</div>
+
+</section>
+
+<section class="save-date">
+
+<h2>Save the Date</h2>
+
+<p>October 10, 2026</p>
+
+<p>Lima, Perú</p>
+
+</section>
+
+<script>
+
+function scrollToSection(){
+document.querySelector(".save-date")
+.scrollIntoView({behavior:"smooth"});
+}
+
+</script>
+
+</body>
+</html>
