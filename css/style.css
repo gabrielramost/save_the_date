@@ -192,46 +192,104 @@ transform:translate(-50%,5px);
 
 
 /* ----------------------------- */
-/* SAVE THE DATE */
+/* SAVE THE DATE CINEMATIC */
 /* ----------------------------- */
 
 .save-date{
 
-background:#f6f4ef;
+background:#0f0f0f;
+color:#f8fbca;
+
+padding:120px 20px;
+
+flex-direction:column;
 
 }
 
-.save-container{
+/* título */
 
-max-width:600px;
+.save-title{
 
-padding:40px;
+font-family:'Playfair Display', serif;
 
-}
+font-size:42px;
 
-.title{
+letter-spacing:6px;
 
-font-size:40px;
-
-margin-bottom:20px;
-
-font-weight:500;
+margin-bottom:25px;
 
 }
 
-.date{
+/* fecha */
 
-font-size:26px;
+.save-date-text{
+
+font-family:'Cormorant Garamond', serif;
+
+font-size:34px;
 
 margin-bottom:10px;
 
 }
 
-.location{
+/* ciudad */
+
+.save-location{
 
 font-size:18px;
 
 opacity:0.7;
+
+margin-bottom:60px;
+
+}
+
+
+/* ----------------------------- */
+/* PHOTO CAROUSEL */
+/* ----------------------------- */
+
+.photo-carousel{
+
+width:100%;
+overflow:hidden;
+
+}
+
+.carousel-track{
+
+display:flex;
+
+gap:30px;
+
+animation:scrollCarousel 35s linear infinite;
+
+}
+
+.carousel-track img{
+
+height:380px;
+
+border-radius:8px;
+
+object-fit:cover;
+
+filter:saturate(110%) contrast(105%);
+
+}
+
+
+/* movimiento lento */
+
+@keyframes scrollCarousel{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
 
 }
 
