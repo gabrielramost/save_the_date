@@ -32,9 +32,11 @@ position:relative;
 
 .hero{
 
+position:relative;
+
 height:100vh;
 
-background-image:url("../assets/img/hero.jpeg"); /* verifica nombre exacto */
+background-image:url("../assets/img/hero.jpeg");
 
 background-size:cover;
 background-position:center;
@@ -218,6 +220,8 @@ letter-spacing:6px;
 
 margin-bottom:25px;
 
+text-shadow:0 5px 20px rgba(0,0,0,0.6);
+
 }
 
 /* fecha */
@@ -256,19 +260,18 @@ overflow:hidden;
 
 }
 
-.carousel-track{
+.carousel-track img:hover{
 
-display:flex;
+transform:scale(1.05);
 
-gap:30px;
-
-animation:scrollCarousel 35s linear infinite;
+transition:transform .4s ease;
 
 }
 
 .carousel-track img{
 
 height:380px;
+min-width:280px;
 
 border-radius:8px;
 
@@ -312,12 +315,12 @@ font-size:22px;
 padding:40px;
 }
 
-.title{
+.save-title{
 font-size:32px;
 }
 
-.date{
-font-size:22px;
+.save-date-text{
+font-size:26px;
 }
 
 .hero{
