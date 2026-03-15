@@ -237,7 +237,15 @@ font-size:32px;
 font-size:22px;
 }
 
+/* ajuste imagen móvil */
+
+.hero{
+background-position:65% center;
 }
+
+}
+
+/* Añadir la animación de la entrada */
 
 @keyframes fadeUp{
 
