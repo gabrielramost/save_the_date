@@ -310,9 +310,9 @@ display:flex;
 
 gap:30px;
 
-animation:scrollCarousel 35s linear infinite;
+width:max-content;
 
-will-change: transform;
+animation:scrollCarousel 40s linear infinite;
 
 }
 .carousel-track img:hover{
