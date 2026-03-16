@@ -325,6 +325,8 @@ transition:all .3s ease;
 
 .calendar-btn:hover{
 
+background:#ffffff;
+
 transform:translateY(-3px);
 
 box-shadow:0 10px 25px rgba(0,0,0,0.25);
@@ -544,6 +546,7 @@ font-family:'Playfair Display', serif;
 
 .count-item span{
 
+transition:all .3s ease;
 font-size:40px;
 font-weight:500;
 letter-spacing:2px;
