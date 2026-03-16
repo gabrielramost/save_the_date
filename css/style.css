@@ -69,6 +69,8 @@ height:100%;
 
 background:rgba(0,0,0,0.35);
 
+z-index:1;
+
 }
 
 /* contenido hero */
@@ -76,6 +78,7 @@ background:rgba(0,0,0,0.35);
 .hero-overlay{
 
 position:relative;
+
 z-index:2;
 
 padding:70px 60px;
