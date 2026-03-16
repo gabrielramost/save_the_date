@@ -330,15 +330,9 @@ margin-top:80px;
 
 
 .carousel-track{
-
 display:flex;
-
 gap:30px;
-
-width:fit-content;
-
-animation:scrollCarousel 35s linear infinite;
-
+animation:scrollCarousel 40s linear infinite;
 }
 
 .carousel-track img:hover{
@@ -367,7 +361,6 @@ filter:saturate(110%) contrast(105%);
 /* movimiento lento */
 
 @keyframes scrollCarousel{
-
 0%{
 transform:translateX(0);
 }
@@ -375,7 +368,6 @@ transform:translateX(0);
 100%{
 transform:translateX(-50%);
 }
-
 }
 
 
