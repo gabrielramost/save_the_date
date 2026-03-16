@@ -335,9 +335,9 @@ display:flex;
 
 gap:30px;
 
-width:fit-content;
+width:max-content;
 
-animation:scrollCarousel 40s linear infinite;
+animation:scrollCarousel 60s linear infinite;
 
 }
 
@@ -375,11 +375,10 @@ transform:translateX(0);
 }
 
 100%{
-transform:translateX(calc(-50% - 15px));
+transform:translateX(calc(-50%));
 }
 
 }
-
 /* ----------------------------- */
 /* MOBILE */
 /* ----------------------------- */
