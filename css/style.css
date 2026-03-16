@@ -334,6 +334,49 @@ cursor:grab;
 
 }
 
+.photo-carousel::before,
+.photo-carousel::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+height:100%;
+
+width:160px;
+
+z-index:3;
+
+pointer-events:none;
+
+}
+
+.photo-carousel::before{
+
+left:0;
+
+background:linear-gradient(
+to right,
+#0f0f0f 0%,
+rgba(15,15,15,0) 100%
+);
+
+}
+
+.photo-carousel::after{
+
+right:0;
+
+background:linear-gradient(
+to left,
+#0f0f0f 0%,
+rgba(15,15,15,0) 100%
+);
+
+}
+
 .photo-carousel::-webkit-scrollbar{
 display:none;
 }
