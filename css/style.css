@@ -479,8 +479,12 @@ background-position:45% center;
 animation:scrollCarousel 50s linear infinite;
 }
 
+.photo-carousel::before,
+.photo-carousel::after{
+display:none;
 }
 
+}
 /* Añadir la animación de la entrada */
 
 /* ----------------------------- */
