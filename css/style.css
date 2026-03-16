@@ -321,14 +321,35 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
 
 width:100%;
 
-overflow:hidden;
+overflow-x:auto;
+overflow-y:hidden;
 
 position:relative;
 
 margin-top:80px;
 
+scroll-behavior:smooth;
+
+cursor:grab;
+
 }
 
+.photo-carousel::-webkit-scrollbar{
+display:none;
+}
+
+.photo-carousel{
+-ms-overflow-style:none;
+scrollbar-width:none;
+}
+
+.photo-carousel:hover .carousel-track{
+animation-play-state:paused;
+}
+
+.photo-carousel:active{
+cursor:grabbing;
+}
 
 .carousel-track{
 
