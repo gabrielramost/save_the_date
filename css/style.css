@@ -332,9 +332,12 @@ display:flex;
 
 gap:30px;
 
-animation:scrollCarousel 40s linear infinite;
+width:fit-content;
+
+animation:scrollCarousel 35s linear infinite;
 
 }
+
 .carousel-track img:hover{
 
 transform:scale(1.05);
@@ -407,16 +410,14 @@ background-position:45% center;
 
 /* Añadir la animación de la entrada */
 
-@keyframes fadeUp{
+@keyframes scrollCarousel{
 
-from{
-opacity:0;
-transform:translateY(18px);
+0%{
+transform:translateX(0);
 }
 
-to{
-opacity:1;
-transform:translateY(0);
+100%{
+transform:translateX(-50%);
 }
 
 }
