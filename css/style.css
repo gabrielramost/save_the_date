@@ -478,6 +478,10 @@ transform:translateX(calc(-50%));
 
 @media (max-width:768px){
 
+.carousel-track{
+animation:none; 
+}
+  
 .names{
 font-size:48px;
 }
@@ -500,10 +504,6 @@ font-size:26px;
 
 .hero{
 background-position:45% center;
-}
-
-.carousel-track{
-animation:scrollCarousel 50s linear infinite;
 }
 
 .photo-carousel::before,
