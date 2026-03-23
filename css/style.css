@@ -19,6 +19,11 @@ overflow-x:hidden;
 position:relative;
 
 }
+
+html{
+overflow-x:hidden;
+}
+
 /* secciones full screen */
 
 section{
@@ -340,6 +345,7 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
 .photo-carousel{
 
 width:100%;
+max-width:100%;
 
 overflow-x:auto;
 overflow-y:hidden;
@@ -419,6 +425,8 @@ cursor:grabbing;
 display:flex;
 
 gap:0;
+
+width:fit-content; 
 
 animation:scrollCarousel 60s linear infinite;
 
