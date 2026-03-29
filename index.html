@@ -192,5 +192,43 @@ document.getElementById("minutes").innerHTML = minutes;
  
 </script>
 
+<script>
+
+const carousel = document.querySelector('.photo-carousel');
+
+let autoScroll;
+
+// SOLO EN MOBILE
+if (window.innerWidth <= 768){
+
+function startAutoScroll(){
+autoScroll = setInterval(()=>{
+carousel.scrollLeft += 0.5; // velocidad
+
+// LOOP infinito suave
+if (carousel.scrollLeft >= carousel.scrollWidth / 2){
+carousel.scrollLeft = 0;
+}
+
+}, 20);
+}
+
+function stopAutoScroll(){
+clearInterval(autoScroll);
+}
+
+// iniciar
+startAutoScroll();
+
+// detener cuando tocas
+carousel.addEventListener('touchstart', stopAutoScroll);
+
+// reanudar cuando sueltas
+carousel.addEventListener('touchend', startAutoScroll);
+
+}
+
+</script>
+
 </body>
 </html>
