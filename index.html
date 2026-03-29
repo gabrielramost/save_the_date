@@ -197,34 +197,47 @@ document.getElementById("minutes").innerHTML = minutes;
 const carousel = document.querySelector('.photo-carousel');
 
 let autoScroll;
+let isUserInteracting = false;
 
-// SOLO EN MOBILE
+// SOLO MOBILE
 if (window.innerWidth <= 768){
 
 function startAutoScroll(){
-autoScroll = setInterval(()=>{
-carousel.scrollLeft += 0.5; // velocidad
 
-// LOOP infinito suave
+autoScroll = requestAnimationFrame(function scroll(){
+
+if (!isUserInteracting){
+
+carousel.scrollLeft += 0.4;
+
+// loop infinito REAL
 if (carousel.scrollLeft >= carousel.scrollWidth / 2){
 carousel.scrollLeft = 0;
 }
 
-}, 20);
+}
+
+autoScroll = requestAnimationFrame(scroll);
+
+});
+
 }
 
 function stopAutoScroll(){
-clearInterval(autoScroll);
+isUserInteracting = true;
+}
+
+function resumeAutoScroll(){
+isUserInteracting = false;
 }
 
 // iniciar
 startAutoScroll();
 
-// detener cuando tocas
-carousel.addEventListener('touchstart', stopAutoScroll);
-
-// reanudar cuando sueltas
-carousel.addEventListener('touchend', startAutoScroll);
+// eventos touch (iPhone FIX)
+carousel.addEventListener('touchstart', stopAutoScroll, {passive:true});
+carousel.addEventListener('touchmove', stopAutoScroll, {passive:true});
+carousel.addEventListener('touchend', resumeAutoScroll);
 
 }
 
