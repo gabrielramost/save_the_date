@@ -358,7 +358,7 @@ scroll-behavior:smooth;
 
 cursor:grab;
 
-touch-action: pan-y;                 
+touch-action: pan-x;                 
 -webkit-overflow-scrolling: touch;   
 
 }
