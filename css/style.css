@@ -486,6 +486,11 @@ transform:translateX(-50%);
 .carousel-track{
 animation:none; 
 }
+
+.photo-carousel{
+overflow-x:auto;
+scroll-behavior:auto; 
+}
   
 .names{
 font-size:48px;
