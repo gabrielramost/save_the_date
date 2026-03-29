@@ -358,6 +358,9 @@ scroll-behavior:smooth;
 
 cursor:grab;
 
+touch-action: pan-y;                 
+-webkit-overflow-scrolling: touch;   
+
 }
 
 .photo-carousel::before,
@@ -416,6 +419,10 @@ scrollbar-width:none;
 animation-play-state:paused;
 }
 
+.photo-carousel:active .carousel-track{
+animation-play-state:paused;
+}
+
 .photo-carousel:active{
 cursor:grabbing;
 }
@@ -424,9 +431,9 @@ cursor:grabbing;
 
 display:flex;
 
-gap:0;
+gap:30px; 
 
-width:fit-content; 
+width:fit-content;
 
 animation:scrollCarousel 60s linear infinite;
 
@@ -444,8 +451,6 @@ transition:transform .4s ease;
 
 height:320px;
 width:280px;
-
-margin-right:30px;
 
 flex-shrink:0;
 
@@ -468,7 +473,7 @@ transform:translateX(0);
 }
 
 100%{
-transform:translateX(calc(-50%));
+transform:translateX(-50%);
 }
 
 }
