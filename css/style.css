@@ -415,14 +415,6 @@ display:none;
 scrollbar-width:none;
 }
 
-.photo-carousel:hover .carousel-track{
-animation-play-state:paused;
-}
-
-.photo-carousel:active .carousel-track{
-animation-play-state:paused;
-}
-
 .photo-carousel:active{
 cursor:grabbing;
 }
