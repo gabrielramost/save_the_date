@@ -199,9 +199,9 @@ let autoScroll;
 let isUserInteracting = false;
 
 // SOLO MOBILE
-const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-if (isIOS){
+if (isMobile){
 
 function startAutoScroll(){
 
