@@ -199,7 +199,9 @@ let autoScroll;
 let isUserInteracting = false;
 
 // SOLO MOBILE
-if (window.innerWidth <= 768){
+const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+if (isIOS){
 
 function startAutoScroll(){
 
