@@ -474,7 +474,7 @@ transform:translateX(-50%);
 @media (max-width:768px){
 
 .carousel-track{
-animation:none; 
+animation:scrollCarousel 60s linear infinite;
 }
 
 .photo-carousel{
